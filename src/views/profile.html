@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" href="/img/bluebear-logo.png">
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Backend Test</title>
+    </head>
+    <body>    
+        <%- include ('partials/header') -%>
+
+        <div class="box c1x3">
+            <div class="card">
+                <img src="/imgs/img_avatar1.png" alt="Avatar" style="width:100%">
+                <hr>
+                <h2><%=user.username%></h2>
+                <h3><%=user.name%> <%=user.secondname%></h3>
+            </div>
+            <div class="card">
+                <% if (user) { %>
+                <form class="container" action="/user/modify" method="POST">
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" name="email" value="<%=user.email%>" minlength="4" maxlength="20"/>
+
+                    <label htmlFor="username">Usuario:</label>
+                    <input type="username" name="username" value="<%=user.username%>" minlength="4" maxlength="20"/>
+
+                    
+                    <label htmlFor="name">Nombre:</label>
+                    <input type="username" name="name" value="<%=user.name%>" minlength="3" maxlength="20"/>
+
+                    <label htmlFor="secondnmae">Apellido:</label>
+                    <input type="secondname" name="secondname" value="<%=user.secondname%>" minlength="3" maxlength="20"/>
+
+                    <label htmlFor="password">Nueva Contraseña:</label>
+                    <input type="password" name="password" placeholder="**********" required minlength="4" maxlength="20"/>
+
+                    <label htmlFor="password">Contraseña:</label>
+                    <input type="password" name="currentpassword" placeholder="**********" required minlength="4" maxlength="20"/>
+                    <% if (msg) { %>
+                            <p class="message">*<%=msg%>*</p>
+                    <% } %>
+
+                    <button type="submit">Cambiar información</button>
+                </form>
+                <% } %>
+            </div>
+        </div>
+
+        <%- include ('partials/footer') -%>
+    </body>
+</html>

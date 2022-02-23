@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" href="/img/img_auth.png">
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Backend Test</title>
+    </head>
+    <body>    
+        <%- include ('partials/header') -%>
+        <div class="box c1x1">
+            <div class="card" id="loginForm">
+                    <h3 class="portrait">Autenticación de usuario</h3>
+                    <hr>
+                <form class="container" action="/auth/signin" method="POST">
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" name="email" placeholder="Email" required minlength="4" maxlength="20"/>
+                    <label htmlFor="password">Contraseña:</label>
+                    <input type="password" name="password" placeholder="**********" required minlength="4" maxlength="20"/>
+
+    <% if (msg) { %>
+            <p class="message">*<%=msg%>*</p>
+    <% } %>
+                    <button type="submit">Iniciar Sesión</button>
+                    <a href="javascript:login()" id="login">Ir a registro</a>
+                </form>
+            </div>
+
+            <div class="card" id="registerForm" style="display: none;">
+                    <h3 class="portrait">Registro de usuario</h3>
+                    <hr>
+                <form class="container" action="/auth/signup" method="POST">
+                    <label htmlFor="name">Nombre:</label>
+                    <input type="name" name="name" placeholder="Nombre" required minlength="3" maxlength="20"/>
+                    <label htmlFor="secondname">Apellido:</label>
+                    <input type="secondname" name="secondname" placeholder="Apellido" required minlength="3" maxlength="20"/>
+                    <label htmlFor="username">Usuario:</label>
+                    <input type="username" name="username" placeholder="Usuario" required minlength="4" maxlength="20"/>
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" name="email" placeholder="Email" required minlength="4" maxlength="20"/>
+                    <label htmlFor="password">Contraseña:</label>
+                    <input type="password" name="password" placeholder="**********" required minlength="4" maxlength="20"/>
+
+                    <button type="submit">Registrar</button>
+
+                    <a href="javascript:register()" id="login">Ir a inicio de sesión</a>
+                </form>
+            </div>
+
+
+            <img src="/imgs/img_auth.png" alt="Avatar" style="width:100%; padding:55px;">
+        </div>
+        <script languague="javascript">
+            const lf = document.getElementById('loginForm')
+            const rf = document.getElementById('registerForm')
+            function login() {
+                           lf.style.display = 'none' 
+                           rf.style.display = '' 
+                        }
+            
+            function register() {
+                           lf.style.display = '' 
+                           rf.style.display = 'none' 
+                        }
+        </script>
+        <%- include ('partials/footer') -%>
+    </body>
+</html>
