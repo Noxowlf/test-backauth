@@ -1,0 +1,22 @@
+<header>
+    <nav>
+          <div class="left">
+            <h1 class="portrait">
+              <a href="#">
+                Inicio
+              </a>
+            </h1>
+          </div>
+
+    <% if (user) { %>
+          <div class="right">
+            <h1 class="portrait">
+              <a href="/auth/logout">
+                Salir
+              </a>
+            </h1>
+          </div>
+    <% } %>
+
+    </nav>
+</header>

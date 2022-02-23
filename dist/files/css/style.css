@@ -1,0 +1,250 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: whitesmoke;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #343a40;
+  border-bottom: 2px solid #6c757d;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #343a40;
+  border-top: 2px solid #6c757d;
+}
+
+footer img {
+  margin-left: 0.5rem;
+}
+
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  margin: .5rem;
+  flex-basis: 5%;
+  padding: 1rem;
+  text-align: left;
+  color: #343a40;
+  text-decoration: none;
+  border: 1px solid #f8f9fa;
+  border-radius: 10px;
+  background: #f8f9fa;
+}
+
+button {
+  text-align: center;
+  margin: 1.5rem;
+  width: 100%;
+  flex-basis: 5%;
+  padding: 1rem;
+  color: #252525;
+  text-decoration: none;
+  border-radius: 10px;
+  background: #b9b9b9;
+}
+
+input:hover,
+input:focus,
+input:active,
+button:hover,
+button:focus,
+button:active {
+  color: #000000;
+  border-color: #252525;
+}
+input h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+input p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+hr {
+    border-top: 1px solid whitesmoke;
+}
+
+.box {
+  padding: 100px 150px;
+}
+
+.container {
+  margin: 1rem;padding: 1rem;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+
+.logo {
+   height: 5em;
+   border-radius: 50%;
+   padding: 10px;
+}
+
+.c1x1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.c1x3 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 50px;
+}
+
+.c1x1x1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+
+.portrait {
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.card {
+  padding: 1rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  background: #343a40;
+  border: 1px solid #6c757d;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title a {
+  color: #a4c1e2;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.message {
+    color: yellow;
+    text-align: left;
+}
+
+@media screen and (max-width: 635px) {
+  .c1x1, .c1x3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 50px;
+  }
+
+  .c1x1x1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+  }
+
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+
+}
